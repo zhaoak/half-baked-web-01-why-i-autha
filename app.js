@@ -38,4 +38,4 @@ signInForm.addEventListener('submit', async (e) => {
 });
 
 // Redirect to /other-page when page loads if user is authenticated
-//redirectIfLoggedIn();
+redirectIfLoggedIn();
