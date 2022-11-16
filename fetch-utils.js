@@ -25,7 +25,8 @@ export async function signInUser(email, password) {
 // call on page load: when called, redirects to login page if not logged in
 export async function checkAuth() {
     const user = getUser();
-    console.log(user);
+
+    if (!user) location.replace('../');
 }
 
 // called on page load, redirects away from page if user is already logged in
