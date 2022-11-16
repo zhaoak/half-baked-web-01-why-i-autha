@@ -31,8 +31,13 @@ export async function checkAuth() {
 // called on page load, redirects away from page if user is already logged in
 export async function redirectIfLoggedIn() {
     if (getUser()) {
-        location.replace('./other-page/index.html');
+        location.replace('./other-page/');
     }
 }
 
-export async function logout() {}
+// logs out user, redirects to login page
+export async function logout() {
+    await client.auth.signOut();
+
+    return (window.location.href = '../');
+}

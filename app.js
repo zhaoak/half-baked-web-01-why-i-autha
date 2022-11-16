@@ -22,7 +22,7 @@ signUpForm.addEventListener('submit', async (e) => {
         console.log(user);
     }
 });
-// Redirect to /other-page on successful auth
+
 signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -36,6 +36,6 @@ signInForm.addEventListener('submit', async (e) => {
         console.log(user);
     }
 });
-// Redirect to /other-page when page loads if user is authenticated
 
-redirectIfLoggedIn();
+// Redirect to /other-page when page loads if user is authenticated
+//redirectIfLoggedIn();
