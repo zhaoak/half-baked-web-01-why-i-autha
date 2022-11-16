@@ -17,15 +17,21 @@ export async function signupUser(email, password) {
 }
 
 // signs in existing user, puts auth token in local browser storage
-export async function signInUser(email, password) {}
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+    return response.user;
+}
 
 // call on page load: when called, redirects to login page if not logged in
-export async function checkAuth() {}
+export async function checkAuth() {
+    const user = getUser();
+    console.log(user);
+}
 
 // called on page load, redirects away from page if user is already logged in
 export async function redirectIfLoggedIn() {
     if (getUser()) {
-        location.replace('./other-page/');
+        location.replace('./other-page/index.html');
     }
 }
 
